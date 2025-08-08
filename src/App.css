@@ -1,0 +1,418 @@
+/* تصميم التطبيق الحديث بألوان مصرية */
+.App {
+  background: linear-gradient(135deg, #c41e3a 0%, #ffd700 50%, #000000 100%);
+  min-height: 100vh;
+  font-family: 'Cairo', 'Amiri', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  direction: rtl;
+}
+
+/* شريط التمرير المخصص */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 215, 0, 0.1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #c41e3a, #ffd700);
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #a01729, #e6c200);
+}
+
+/* تحسين مكونات Material-UI */
+.MuiPaper-root {
+  background: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(20px) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 15px 50px rgba(196, 30, 58, 0.2) !important;
+  border: 2px solid rgba(255, 215, 0, 0.3) !important;
+  transition: all 0.4s ease !important;
+}
+
+.MuiCard-root {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(255, 248, 220, 0.9)) !important;
+  backdrop-filter: blur(25px) !important;
+  border-radius: 25px !important;
+  box-shadow: 0 20px 60px rgba(196, 30, 58, 0.15), 0 5px 15px rgba(255, 215, 0, 0.1) !important;
+  border: 3px solid rgba(255, 215, 0, 0.4) !important;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.MuiCard-root::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #c41e3a, #ffd700, #c41e3a);
+  z-index: 1;
+}
+
+.MuiCard-root:hover {
+  transform: translateY(-8px) scale(1.02) !important;
+  box-shadow: 0 30px 80px rgba(196, 30, 58, 0.25), 0 10px 25px rgba(255, 215, 0, 0.2) !important;
+  border-color: rgba(255, 215, 0, 0.6) !important;
+}
+
+/* تحسين الأزرار */
+.MuiButton-root {
+  background: linear-gradient(135deg, #c41e3a, #e63946) !important;
+  color: white !important;
+  border-radius: 20px !important;
+  padding: 12px 30px !important;
+  font-weight: 700 !important;
+  font-size: 1.1rem !important;
+  text-transform: none !important;
+  box-shadow: 0 8px 25px rgba(196, 30, 58, 0.3) !important;
+  border: 2px solid rgba(255, 215, 0, 0.5) !important;
+  transition: all 0.3s ease !important;
+  font-family: 'Cairo', sans-serif !important;
+}
+
+.MuiButton-root:hover {
+  background: linear-gradient(135deg, #a01729, #c41e3a) !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 12px 35px rgba(196, 30, 58, 0.4) !important;
+  border-color: rgba(255, 215, 0, 0.8) !important;
+}
+
+.MuiButton-root:active {
+  transform: translateY(-1px) !important;
+}
+
+/* أزرار ثانوية */
+.MuiButton-outlined {
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.9), rgba(255, 193, 7, 0.9)) !important;
+  color: #c41e3a !important;
+  border: 2px solid #c41e3a !important;
+}
+
+.MuiButton-outlined:hover {
+  background: linear-gradient(135deg, #ffd700, #ffb300) !important;
+  color: #a01729 !important;
+}
+
+/* تحسين التبويبات */
+.MuiTabs-root {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-radius: 15px !important;
+  padding: 8px !important;
+  margin-bottom: 20px !important;
+}
+
+.MuiTab-root {
+  background: transparent !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  border-radius: 12px !important;
+  margin: 0 5px !important;
+  font-weight: 600 !important;
+  font-family: 'Cairo', sans-serif !important;
+  transition: all 0.3s ease !important;
+}
+
+.MuiTab-root.Mui-selected {
+  background: linear-gradient(135deg, #c41e3a, #ffd700) !important;
+  color: white !important;
+  box-shadow: 0 5px 15px rgba(196, 30, 58, 0.3) !important;
+}
+
+/* تحسين الجداول */
+.MuiDataGrid-root {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-radius: 20px !important;
+  border: 2px solid rgba(255, 215, 0, 0.3) !important;
+  font-family: 'Cairo', sans-serif !important;
+  direction: rtl !important;
+}
+
+.MuiDataGrid-columnHeaders {
+  background: linear-gradient(135deg, #c41e3a, #e63946) !important;
+  color: white !important;
+  font-weight: 700 !important;
+  font-size: 1.1rem !important;
+  border-radius: 18px 18px 0 0 !important;
+}
+
+.MuiDataGrid-columnHeaderTitle {
+  font-family: 'Cairo', sans-serif !important;
+  font-weight: 700 !important;
+}
+
+.MuiDataGrid-row {
+  transition: all 0.3s ease !important;
+}
+
+.MuiDataGrid-row:hover {
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(196, 30, 58, 0.05)) !important;
+  transform: scale(1.01) !important;
+}
+
+.MuiDataGrid-cell {
+  border-bottom: 1px solid rgba(255, 215, 0, 0.2) !important;
+  font-family: 'Cairo', sans-serif !important;
+  padding: 16px !important;
+}
+
+/* تحسين الرقائق */
+.MuiChip-root {
+  background: linear-gradient(135deg, #ffd700, #ffb300) !important;
+  color: #c41e3a !important;
+  font-weight: 600 !important;
+  border-radius: 15px !important;
+  font-family: 'Cairo', sans-serif !important;
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3) !important;
+}
+
+.MuiChip-colorPrimary {
+  background: linear-gradient(135deg, #c41e3a, #e63946) !important;
+  color: white !important;
+}
+
+.MuiChip-colorSecondary {
+  background: linear-gradient(135deg, #2e7d32, #4caf50) !important;
+  color: white !important;
+}
+
+/* بطاقات KPI */
+.kpi-card {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(255, 248, 220, 0.9)) !important;
+  border-radius: 25px !important;
+  padding: 25px !important;
+  text-align: center !important;
+  box-shadow: 0 15px 40px rgba(196, 30, 58, 0.15) !important;
+  border: 3px solid rgba(255, 215, 0, 0.4) !important;
+  transition: all 0.4s ease !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.kpi-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #c41e3a, #ffd700, #c41e3a);
+}
+
+.kpi-card:hover {
+  transform: translateY(-10px) rotate(1deg) !important;
+  box-shadow: 0 25px 60px rgba(196, 30, 58, 0.25) !important;
+}
+
+.kpi-number {
+  font-size: 2.5rem !important;
+  font-weight: 800 !important;
+  background: linear-gradient(135deg, #c41e3a, #ffd700) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  margin-bottom: 10px !important;
+}
+
+.kpi-label {
+  color: #c41e3a !important;
+  font-weight: 600 !important;
+  font-size: 1.1rem !important;
+  font-family: 'Cairo', sans-serif !important;
+}
+
+/* تحسين النوافذ المنبثقة */
+.MuiDialog-paper {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(255, 248, 220, 0.95)) !important;
+  border-radius: 25px !important;
+  border: 3px solid rgba(255, 215, 0, 0.5) !important;
+  box-shadow: 0 25px 80px rgba(196, 30, 58, 0.2) !important;
+}
+
+.MuiDialogTitle-root {
+  background: linear-gradient(135deg, #c41e3a, #e63946) !important;
+  color: white !important;
+  text-align: center !important;
+  font-family: 'Cairo', sans-serif !important;
+  font-weight: 700 !important;
+  border-radius: 22px 22px 0 0 !important;
+  margin: -24px -24px 20px -24px !important;
+  padding: 20px 24px !important;
+}
+
+/* تحسين حقول الإدخال */
+.MuiTextField-root {
+  margin: 10px 0 !important;
+}
+
+.MuiOutlinedInput-root {
+  border-radius: 15px !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  font-family: 'Cairo', sans-serif !important;
+}
+
+.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: #ffd700 !important;
+  border-width: 2px !important;
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #c41e3a !important;
+  border-width: 3px !important;
+}
+
+.MuiInputLabel-root {
+  font-family: 'Cairo', sans-serif !important;
+  font-weight: 600 !important;
+}
+
+/* تحسين شريط التطبيق */
+.MuiAppBar-root {
+  background: linear-gradient(135deg, #c41e3a 0%, #000000 50%, #ffd700 100%) !important;
+  box-shadow: 0 10px 30px rgba(196, 30, 58, 0.3) !important;
+  border-bottom: 3px solid rgba(255, 215, 0, 0.5) !important;
+}
+
+.MuiToolbar-root {
+  padding: 15px 20px !important;
+}
+
+/* تحسين الطباعة */
+.MuiTypography-h1,
+.MuiTypography-h2,
+.MuiTypography-h3,
+.MuiTypography-h4,
+.MuiTypography-h5,
+.MuiTypography-h6 {
+  font-family: 'Cairo', 'Amiri', sans-serif !important;
+  font-weight: 700 !important;
+  color: #c41e3a !important;
+}
+
+/* تحسين الاستجابة للموبايل */
+@media (max-width: 768px) {
+  .App {
+    padding: 10px !important;
+  }
+  
+  .MuiContainer-root {
+    padding: 10px !important;
+  }
+  
+  .MuiCard-root {
+    margin: 10px 0 !important;
+    border-radius: 20px !important;
+  }
+  
+  .MuiButton-root {
+    padding: 10px 20px !important;
+    font-size: 1rem !important;
+    margin: 5px !important;
+  }
+  
+  .kpi-card {
+    padding: 15px !important;
+    margin: 10px 0 !important;
+  }
+  
+  .kpi-number {
+    font-size: 2rem !important;
+  }
+  
+  .MuiDataGrid-root {
+    font-size: 0.9rem !important;
+  }
+  
+  .MuiToolbar-root {
+    flex-direction: column !important;
+    gap: 10px !important;
+    padding: 10px !important;
+  }
+  
+  .MuiTypography-h4 {
+    font-size: 1.5rem !important;
+  }
+  
+  .MuiTypography-h5 {
+    font-size: 1.2rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .MuiDialog-paper {
+    margin: 10px !important;
+    width: calc(100% - 20px) !important;
+  }
+  
+  .MuiButton-root {
+    width: 100% !important;
+    margin: 5px 0 !important;
+  }
+  
+  .kpi-number {
+    font-size: 1.8rem !important;
+  }
+}
+
+/* تأثيرات الحركة */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+
+/* تحسين الزر العائم */
+.MuiFab-root {
+  background: linear-gradient(135deg, #c41e3a, #ffd700) !important;
+  box-shadow: 0 10px 30px rgba(196, 30, 58, 0.4) !important;
+  border: 3px solid rgba(255, 215, 0, 0.6) !important;
+}
+
+.MuiFab-root:hover {
+  background: linear-gradient(135deg, #a01729, #e6c200) !important;
+  transform: scale(1.1) rotate(5deg) !important;
+  box-shadow: 0 15px 40px rgba(196, 30, 58, 0.5) !important;
+}
+
+/* تحسين التمرير السلس */
+html {
+  scroll-behavior: smooth;
+}
+
+/* تحسين التركيز */
+*:focus {
+  outline: 3px solid rgba(255, 215, 0, 0.6) !important;
+  outline-offset: 2px !important;
+}
